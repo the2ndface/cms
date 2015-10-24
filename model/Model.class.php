@@ -24,7 +24,7 @@
 	        $_result = $_db->query($_sql);
 	        $_objects = $_result->fetch_object();
 	        DB::unDB($_result, $_db);
-	        return $_objects;
+	        return Tool::htmlString($_objects);
 	    }
 	    // find multiple data models
 	    protected function all($_sql){
@@ -35,7 +35,7 @@
 	            $_html[] = $_objects;
 	        }
 	        DB::unDB($_result, $_db);
-	        return $_html;
+	        return Tool::htmlString($_html);
 	    }
 	    //add,del,update model
 	    protected function aud($_sql){

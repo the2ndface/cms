@@ -5,6 +5,7 @@
  *	Content:@file_name
  *
  */
+    session_start();
     //初始化文件
     header('Content-Type:text/html;Charset=utf-8');             //设置编码为UTF-8
     define('ROOT_PATH', dirname(__FILE__));                     //网站根目录

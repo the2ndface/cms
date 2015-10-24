@@ -10,9 +10,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>登录后台CMS管理系统</title>
 <link rel="stylesheet" type="text/css" href="../style/admin.css" />
+<script type="text/javascript" src="../js/admin_login.js"></script>
 </head>
 <body>
-    <form id="adminLogin" method="post" action="">
+    <form id="adminLogin" name="login" method="post" action="manage.php?action=login">
         <fieldset>
             <legend>登录后台CMS管理系统</legend>
             <label>账　号：<input type="text" name="admin_user" class="text"/></label>
@@ -20,7 +21,7 @@
             <label>验证码：<input type="text" name="code" class="text"/></label>
             <label class="t">输入下图的字符，不区分大小写</label>
             <label><img src="../config/code.php" alt="验证码" onclick="javascript:this.src='../config/code.php?tm='+Math.random();"/></label>
-            <input type="submit" value="登录" class="submit" name="send"/>
+            <input type="submit" value="登录" class="submit" name="send" onclick="return checkForm()" />
         </fieldset>
     </form>
 </body>

@@ -12,7 +12,8 @@
     define('DB_NAME','cms');                                //数据库名
     
     //
-    define('PAGE_SIZE',1);                                 //Number of article to display per page
+    define('GPC', get_magic_quotes_gpc());                  //mysql auto escaped status
+    define('PAGE_SIZE',10);                                 //Number of article to display per page
     //模板配置信息
     define('TPL_DIR', ROOT_PATH.'/templates/');             //存放模板文件夹
     define('TPL_C_DIR', ROOT_PATH.'/templates_c/');         //编译文件夹

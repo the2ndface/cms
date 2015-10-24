@@ -14,7 +14,7 @@
         
         //拦截器
         private function __set($_key,$_value){
-            $this->$_key = $_value;
+            $this->$_key = Tool::mysqlString($_value);
         }
         private function __get($_key){
             return $this->$_key;
@@ -28,6 +28,27 @@
                             cms_manage";
             return parent::total($_sql);
         }
+        
+        //get the login manager
+        public function getLoginManage(){
+           $_sql = "SELECT 
+							m.admin_user,
+							l.level_name 
+					FROM 
+							cms_manage m,
+							cms_level l
+					WHERE 
+							m.admin_user='$this->admin_user' 
+						AND 
+							m.admin_pass='$this->admin_pass'
+						AND
+							m.level=l.id
+					LIMIT   1";
+
+			return parent::one($_sql);
+        }
+        
+        
         //查询一名管理员
         public function getOneManage() {
             $_sql = "SELECT

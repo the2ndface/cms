@@ -12,7 +12,7 @@
 
         //拦截器
         private function __set($_key,$_value){
-            $this->$_key = $_value;
+            $this->$_key = Tool::mysqlString($_value);
         }
         private function __get($_key){
             return $this->$_key;

@@ -22,14 +22,15 @@
 //     $_vc = new ValidateCode();
 //     $_vc->doimg();
 
-    $_url = "http://www.baidu.com/web?id=15&page=5";
+//     $_url = "http://www.baidu.com/web?id=15&page=5";
     
-    $_par = parse_url($_url);
+//     $_par = parse_url($_url);
 
-    parse_str($_par['query'],$_query);
+//     parse_str($_par['query'],$_query);
 
-    unset($_query['page']);
-    var_dump(http_build_query($_query));
-    
+//     unset($_query['page']);
+//     var_dump(http_build_query($_query));
+
+
 ?>
 
